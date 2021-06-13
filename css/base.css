@@ -1,0 +1,293 @@
+@font-face {
+  font-family: 'Neucha-Regular';
+  src: local("Dosis"), url(../fonts/Neucha-Regular.ttf) format("truetype");
+}
+
+* {
+  font-family: 'Neucha-Regular', Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+div.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  min-height: 610px;
+  padding: 20px;
+  background-image: url("../images/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@media screen and (min-width: 500px) {
+  div.container {
+    background-image: url("../images/logoWhiteText.png"), url("../images/flagsBalloon.png"), url("../images/background.png");
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-size: 200px auto, 450px auto, cover;
+    background-position: center 92vh, 100% 0, center;
+  }
+}
+
+@media screen and (min-width: 915px) {
+  div.container {
+    background-image: url("../images/sanfonaBalloon.png"), url("../images/zabumbaTriangulo.png"), url("../images/logoWhiteText.png"), url("../images/flagsBalloon.png"), url("../images/background.png");
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+    background-size: 500px auto, 400px auto, 200px auto, 450px auto, cover;
+    background-position: left bottom, right bottom, center 92vh, 100% 0, center;
+  }
+}
+
+div.container div.notebook {
+  position: relative;
+  width: 100%;
+  max-width: 361px;
+  height: 550px;
+  background-color: #FFFFFF;
+  border-radius: 15px;
+  padding: 20px;
+  -webkit-box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (min-height: 850px) {
+  div.container div.notebook {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+
+@media screen and (min-height: 950px) {
+  div.container div.notebook {
+    -webkit-transform: scale(1.4);
+            transform: scale(1.4);
+  }
+}
+
+div.container div.notebook article {
+  width: 100%;
+  height: 100%;
+  padding-left: 30px;
+}
+
+div.container div.notebook article a.close {
+  position: absolute;
+  top: -26px;
+  right: 30px;
+  text-decoration: none;
+  color: white;
+  background: #CB0620 url("../images/close.svg") no-repeat;
+  background-position: right 10px center;
+  padding: 5px 25px 3px 10px;
+}
+
+div.container div.notebook article img.title {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+div.container div.notebook article h2 {
+  position: absolute;
+  width: 130px;
+  height: 27px;
+  right: 0;
+  top: 30px;
+  text-indent: -9999px;
+  overflow: hidden;
+  background: #FFF5E3 url("../images/logo.png") no-repeat;
+  background-size: 80px auto;
+  background-position: 10px center;
+  -webkit-box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.25);
+          box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.25);
+}
+
+div.container div.notebook article div.content {
+  height: 365px;
+  padding: 10px 10px 10px 0;
+  overflow-y: auto;
+  margin-bottom: 15px;
+}
+
+div.container div.notebook article div.content img.picture, div.container div.notebook article div.content iframe {
+  width: 100%;
+  height: auto;
+}
+
+div.container div.notebook article div.content h3 {
+  background-color: #004DAD;
+  padding: 8px 0 5px 0;
+  text-align: center;
+  margin: -7px 0 20px 0;
+  color: #FFC332;
+}
+
+div.container div.notebook article div.content h4 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  text-decoration: underline;
+}
+
+div.container div.notebook article div.content ul.list, div.container div.notebook article div.content ol.list {
+  margin: 0 0 20px 15px;
+}
+
+div.container div.notebook article div.content ul.list li, div.container div.notebook article div.content ol.list li {
+  margin-bottom: 10px;
+}
+
+div.container div.notebook article div.content ul.list {
+  list-style: none;
+}
+
+div.container div.notebook article div.content ul.list li::before {
+  content: "-";
+  margin: 0 10px 0 -15px;
+}
+
+div.container div.notebook article div.content ul.sumary::after {
+  display: block;
+  background-color: #CB0620;
+  width: 100%;
+  height: 33px;
+  content: "";
+  margin-top: 30px;
+}
+
+div.container div.notebook article div.content ul.sumary li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid lightgray;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+div.container div.notebook article div.content ul.sumary li span {
+  margin-bottom: -7px;
+}
+
+div.container div.notebook article nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+div.container div.notebook article nav ul {
+  background: #FFF5E3;
+  -webkit-box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.25);
+          box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.25);
+  list-style: none;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 5px 20px 2px 20px;
+  gap: 30px;
+  margin-right: -20px;
+}
+
+div.container div.notebook article nav ul li.page {
+  line-height: 18px;
+  text-decoration: underline;
+}
+
+div.container div.notebook article nav ul li.next, div.container div.notebook article nav ul li.prev {
+  width: 15px;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 15px auto;
+  cursor: pointer;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+
+div.container div.notebook article nav ul li.next {
+  background-image: url("../images/arrowRight.svg");
+}
+
+div.container div.notebook article nav ul li.prev {
+  background-image: url("../images/arrowLeft.svg");
+}
+
+div.container div.notebook.cover {
+  background: #004DAD;
+}
+
+div.container div.notebook.cover article {
+  background-color: #FEDA0C;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+div.container div.notebook.cover article h2 {
+  position: absolute;
+  width: 170px;
+  height: 40px;
+  right: 0;
+  top: 65px;
+  text-indent: -9999px;
+  overflow: hidden;
+  background: #FFF5E3 url("../images/logo.png") no-repeat;
+  background-size: 115px auto;
+  background-position: 10px center;
+  -webkit-box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.25);
+          box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.25);
+}
+
+div.container div.notebook.cover article a {
+  background-color: #CB0620;
+  color: white;
+  text-decoration: none;
+  padding: 5px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+div.container div.notebook.cover article h2 {
+  position: absolute;
+  width: 170px;
+  height: 40px;
+  right: 0;
+  top: 65px;
+  text-indent: -9999px;
+  overflow: hidden;
+  background: #FFF5E3 url("../images/logo.png") no-repeat;
+  background-size: 115px auto;
+  background-position: 10px center;
+  -webkit-box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.25);
+          box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.25);
+}
+
+div.container div.notebook::before {
+  position: absolute;
+  display: block;
+  background: url("../images/spiral.png") repeat-y;
+  content: "";
+  width: 38px;
+  height: 522px;
+  margin: -5px 0 0 -30px;
+}
+/*# sourceMappingURL=base.css.map */

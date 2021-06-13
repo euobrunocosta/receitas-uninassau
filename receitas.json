@@ -1,0 +1,58 @@
+[
+  {
+    "titulo": "Bolo de Milho",
+    "video": "https://www.youtube.com/watch?v=FZa0OHLBqao",
+    "ingredientes": [
+      "2 espigas de milho verde ou 2 latas de milho",
+      "400 ml de leite",
+      "3 ovos",
+      "1¹/² xícara(chá) de açúcar",
+      "xícara(chá) de farinha de trigo sem fermento",
+      "2 colheres(sopa) de margarina",
+      "1 colher(sopa) fermento em pó"
+    ],
+    "preparo": [
+      "Se for usar espiga de milho, retire o milho da espiga",
+      "Leve o milho junto com o leite e os ovos ao liquidificador",
+      "Bata por 2 minutos até a mistura ficar homogênia",
+      "Adicione a margarina, o açúcar e a farinha de trigo",
+      "Misture com uma colher e em seguida bata por mais 2 minutos",
+      "Adicione fermento em pó e misture bem",
+      "Despeje essa mistura numa forma untada e afarinhad"
+    ]
+  },
+  {
+    "titulo": "Brigadeiro de Milho",
+    "imagem": "brigadeiro.jpg",
+    "ingredientes": [
+      "Coco Fresco",
+      "Milho",
+      "Água",
+      "Mel",
+      "Leite em pó",
+      "Açúcar",
+      "Canela",
+      "1 Lata de creme de leite zero lactose"
+    ],
+    "preparo": [
+      "Faz igual brigadeiro normal e adiciona milho."
+    ]
+  },
+  {
+    "titulo": "Cocada de Forno",
+    "imagem": "cocada.jpg",
+    "video": "",
+    "ingredientes": [
+      "2 ¹/² xícaras(chá) de coco fresco ralado (1 coco - cerca de 200 gramas)",
+      "3 ovos",
+      "2 xícaras(chá) de açúcar",
+      "1 colher(sopa) manteiga derretida"
+    ],
+    "preparo": [
+      "Preaqueça o forno a 180ºC. Unte com manteiga um refratário que comporte 500ml.",
+      "Quebre os ovos em uma tigela. Junte a manteiga e misture com o batedor de arame. Adicione o açúcar, aos poucos, mexendo bem a cada adição. Acrescente o coco ralado e misture com a espátula para encorporar.",
+      "Transfira a massa para o refratário e leve ao forno para assar por cerca de 40 minutos, ou até ficar bem dourada, a cocada vai ficar com uma casquinha crocante mas ainda cremosa no centro.",
+      "Retire do forno e deixe esfriar antes de servir. Essa cocada também fica uma delícia servida gelada."
+    ]
+  }
+]

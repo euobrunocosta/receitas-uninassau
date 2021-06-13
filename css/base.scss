@@ -1,0 +1,281 @@
+@font-face {
+  font-family: 'Neucha-Regular';
+  src: local('Dosis'), url(../fonts/Neucha-Regular.ttf) format('truetype');
+}
+
+* {
+  font-family: 'Neucha-Regular', Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$red: #CB0620;
+$blue: #004DAD;
+
+$background-image: url('../images/background.png');
+$logo-image: url('../images/logoWhiteText.png');
+$flags-image: url('../images/flagsBalloon.png');
+$zabumbaTriangulo-image: url('../images/zabumbaTriangulo.png');
+$sanfona-image: url('../images/sanfonaBalloon.png');
+$oneNoRepeat: no-repeat;
+$twoNoRepeat: no-repeat, no-repeat;
+$threeNoRepeat: no-repeat, no-repeat, no-repeat;
+$fourNoRepeat: no-repeat, no-repeat, no-repeat, no-repeat;
+$fiveNoRepeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+$background-size: cover;
+$logo-size: 200px auto;
+$flags-size: 450px auto;
+$zabumbaTriangulo-size: 400px auto;
+$sanfona-size: 500px auto;
+$background-position: center;
+$logo-position: center 92vh;
+$flags-position: 100% 0;
+$zabumbaTriangulo-position: right bottom;
+$sanfona-position: left bottom;
+
+div.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  min-height: 610px;
+  padding: 20px;
+  background-image: $background-image;
+  background-repeat: $oneNoRepeat;
+  background-size: $background-size;
+  background-position: $background-position;
+
+  @media screen and (min-width: 500px) {
+    background-image: $logo-image, $flags-image, $background-image;
+    background-repeat: $threeNoRepeat;
+    background-size: $logo-size, $flags-size, $background-size;
+    background-position: $logo-position, $flags-position, $background-position;
+  }
+
+  @media screen and (min-width: 915px) {
+    background-image: $sanfona-image, $zabumbaTriangulo-image, $logo-image, $flags-image, $background-image;
+    background-repeat: $fiveNoRepeat;
+    background-size: $sanfona-size, $zabumbaTriangulo-size, $logo-size, $flags-size, $background-size;
+    background-position: $sanfona-position, $zabumbaTriangulo-position, $logo-position, $flags-position, $background-position;
+  }
+
+  div.notebook {
+    position: relative;
+    width: 100%;
+    max-width: 361px;
+    height: 550px;
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.5);
+
+    @media screen and (min-height: 850px) {
+      transform: scale(1.2);
+    }
+
+    @media screen and (min-height: 950px) {
+      transform: scale(1.4);
+    }
+
+    article {
+      width: 100%;
+      height: 100%;
+      padding-left: 30px;
+
+      a.close {
+        position: absolute;
+        top: -26px;
+        right: 30px;
+        text-decoration: none;
+        color: white;
+        background: $red url('../images/close.svg') no-repeat;
+        background-position: right 10px center;
+        padding: 5px 25px 3px 10px;
+      }
+
+      img.title {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+      }
+
+      h2 {
+        position: absolute;
+        width: 130px;
+        height: 27px;
+        right: 0;
+        top: 30px;
+        text-indent: -9999px;
+        overflow: hidden;
+        background: #FFF5E3 url('../images/logo.png') no-repeat;
+        background-size: 80px auto;
+        background-position: 10px center;
+        box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.25);
+      }
+
+      div.content {
+        height: 365px;
+        padding: 10px 10px 10px 0;
+        overflow-y: auto;
+        margin-bottom: 15px;
+
+        img.picture, iframe {
+          width: 100%;
+          height: auto;
+        }
+  
+        h3 {
+          background-color: $blue;
+          padding: 8px 0 5px 0;
+          text-align: center;
+          margin: -7px 0 20px 0;
+          color: #FFC332;
+        }
+  
+        h4 {
+          font-size: 18px;
+          margin-bottom: 20px;
+          text-decoration: underline;
+        }
+  
+        ul.list, ol.list {
+          margin: 0 0 20px 15px;
+  
+          li {
+            margin-bottom: 10px;
+          }
+        }
+  
+        ul.list {
+          list-style: none;
+  
+          li::before{
+            content:"-";
+            margin: 0 10px 0 -15px;
+          }
+        }
+
+        ul.sumary {
+          &::after {
+            display: block;
+            background-color: $red;
+            width: 100%;
+            height: 33px;
+            content: "";
+            margin-top: 30px;
+          }
+
+          li {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid lightgray;
+            margin-bottom: 10px;
+            cursor: pointer;
+
+            span {
+              margin-bottom: -7px;
+            }
+          }
+        }
+      }
+
+      nav {
+        display: flex;
+        justify-content: flex-end;
+
+        ul {
+          background: #FFF5E3;
+          box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.25);
+          list-style: none;
+          display: inline-flex;
+          padding: 5px 20px 2px 20px;
+          gap: 30px;
+          margin-right: -20px;
+
+          li.page {
+            line-height: 18px;
+            text-decoration: underline;
+          }
+
+          li.next, li.prev {
+            width: 15px;
+            background-repeat: no-repeat;
+            background-position: top center;
+            background-size: 15px auto;
+            cursor: pointer;
+            text-indent: -9999px;
+            overflow: hidden;
+          }
+
+          li.next {
+            background-image: url('../images/arrowRight.svg');
+          }
+
+          li.prev {
+            background-image: url('../images/arrowLeft.svg');
+          }
+        }
+      }
+    }
+
+    &.cover {
+      background: $blue;
+
+      article {
+        background-color: #FEDA0C;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        h2 {
+          position: absolute;
+          width: 170px;
+          height: 40px;
+          right: 0;
+          top: 65px;
+          text-indent: -9999px;
+          overflow: hidden;
+          background: #FFF5E3 url('../images/logo.png') no-repeat;
+          background-size: 115px auto;
+          background-position: 10px center;
+          box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.25);
+        }
+  
+        a {
+          background-color: $red;
+          color: white;
+          text-decoration: none;
+          padding: 5px 20px;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+    
+        h2 {
+          position: absolute;
+          width: 170px;
+          height: 40px;
+          right: 0;
+          top: 65px;
+          text-indent: -9999px;
+          overflow: hidden;
+          background: #FFF5E3 url('../images/logo.png') no-repeat;
+          background-size: 115px auto;
+          background-position: 10px center;
+          box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.25);
+        }
+      }
+    }
+
+    &::before {
+      position: absolute;
+      display: block;
+      background: url('../images/spiral.png') repeat-y;
+      content: "";
+      width: 38px;
+      height: 522px;
+      margin: -5px 0 0 -30px
+    }
+    
+  }
+}
