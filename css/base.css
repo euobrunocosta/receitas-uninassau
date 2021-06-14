@@ -125,6 +125,8 @@ div.container div.notebook article div.content img.picture, div.container div.no
 }
 
 div.container div.notebook article div.content h3 {
+  background: #004DAD url("../images/blueFlowerBG.png");
+  background-size: 150px auto;
   background-color: #004DAD;
   padding: 8px 0 5px 0;
   text-align: center;
@@ -157,7 +159,8 @@ div.container div.notebook article div.content ul.list li::before {
 
 div.container div.notebook article div.content ul.sumary::after {
   display: block;
-  background-color: #CB0620;
+  background: url("../images/redFlowerBG.png");
+  background-size: 150px auto;
   width: 100%;
   height: 33px;
   content: "";
@@ -226,10 +229,15 @@ div.container div.notebook article nav ul li.prev {
 }
 
 div.container div.notebook.cover {
-  background: #004DAD;
+  background: #004DAD url("../images/blueFlowerBG.png");
+  background-size: 150px auto;
 }
 
 div.container div.notebook.cover article {
+  background: url("../images/mesaIgreja.png"), url("../images/bandeirinhas.png");
+  background-position: bottom center, top left;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 321px auto, 210px auto;
   background-color: #FEDA0C;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -242,22 +250,22 @@ div.container div.notebook.cover article {
           align-items: center;
 }
 
-div.container div.notebook.cover article h2 {
-  position: absolute;
-  width: 170px;
-  height: 40px;
-  right: 0;
-  top: 65px;
-  text-indent: -9999px;
-  overflow: hidden;
-  background: #FFF5E3 url("../images/logo.png") no-repeat;
-  background-size: 115px auto;
-  background-position: 10px center;
-  -webkit-box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.25);
-          box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.25);
+div.container div.notebook.cover article div.coverContainer {
+  text-align: center;
+  margin: -110px 0 0 -20px;
 }
 
-div.container div.notebook.cover article a {
+div.container div.notebook.cover article div.coverContainer h3 {
+  width: 170px;
+  height: 160px;
+  text-indent: -9999px;
+  overflow: hidden;
+  background: url("../images/coverTitle.png") no-repeat;
+  background-size: 170px auto;
+  margin-bottom: 10px;
+}
+
+div.container div.notebook.cover article div.coverContainer a {
   background-color: #CB0620;
   color: white;
   text-decoration: none;

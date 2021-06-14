@@ -1,9 +1,12 @@
 const showCover = () => {
   const template = /*html*/`
     <h2>Uninassau</h2>
-    <a href="#" onclick="showPage(1)">
-      Abrir
-    </a>
+    <div class="coverContainer">
+      <h3>Livro de Receitas Juninas Uninassau</h3>
+      <a href="#" onclick="showPage(1)">
+        Abrir
+      </a>
+    </div>
   `
   document.querySelector('div.notebook')
     .classList.add('cover')
