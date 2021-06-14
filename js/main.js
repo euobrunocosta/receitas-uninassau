@@ -84,7 +84,7 @@ const getSumaryTemplate = titles => {
 }
 
 const getJSONRecipies = async () => {
-  const fileRecipies = await fetch('../receitas.json')
+  const fileRecipies = await fetch('../receitas-uninassau/receitas.json')
   const jsonRecipies = await fileRecipies.json()
   return jsonRecipies
 }
