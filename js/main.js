@@ -130,7 +130,7 @@ const getRecipeTemplate = (recipe) => {
     ${_imagem}
     ${_video}
     <h3>${titulo}</h3>
-    <h4>Ingreditentes</h4>
+    <h4>Ingredientes</h4>
     <ul class="list">
       ${listaIngredientes}
     </ul>
