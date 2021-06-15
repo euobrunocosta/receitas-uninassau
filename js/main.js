@@ -18,15 +18,27 @@ const showCover = () => {
 showCover()
 
 const showPage = async (page) => {
+  const getSumaryButton = () => (
+    page > 1
+      ? /*html*/`
+        <a href="#" class="sumary" onclick="showPage(1)">
+          Sumário
+        </a>
+      `
+      : /*html*/`<div></div>`
+  )
   const generatePageTemplate = (content, pagination) => {
+    const sumaryButton = getSumaryButton()
+
     const pageTemplate = /*html*/`
-      <a href="#" class="close" onclick="showCover()">fechar</a>
+      <a href="#" class="close" onclick="showCover()"></a>
       <h2>Uninassau</h2>
       <img class="title" src="./images/title.png" alt="Receitas Juninas">
       <div class="content">
         ${content}
       </div>
       <nav>
+        ${sumaryButton}
         <ul>
           ${pagination}
         </ul>
